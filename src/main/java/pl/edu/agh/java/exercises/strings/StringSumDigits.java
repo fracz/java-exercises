@@ -16,6 +16,22 @@ package pl.edu.agh.java.exercises.strings;
  */
 public class StringSumDigits {
     public int sumDigits(String str) {
-        throw new UnsupportedOperationException();
+        String digitAsLetter="";
+        int sumDigits = 0;
+
+        for (int i=0; i < str.length();i++) {
+
+            var car = str.charAt(i);
+
+            if(Character.isDigit(car)) {
+                digitAsLetter+=car;
+                sumDigits+=Integer.parseInt(digitAsLetter);
+                digitAsLetter ="";
+
+            }
+        }
+
+        return sumDigits;
+          
     }
 }

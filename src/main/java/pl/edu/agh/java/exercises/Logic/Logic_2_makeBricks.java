@@ -20,7 +20,7 @@ public class Logic_2_makeBricks {
 
 		if (goal > (big * 5 + small * 1)) {
 			return false;
-		} else if (goal - (noBig * 5) <= small) {
+		} else if (goal - (Math.min(big, noBig)* 5) <= small) {
 			return true;
 		}
 		return false;
